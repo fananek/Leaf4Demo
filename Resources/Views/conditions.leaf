@@ -1,7 +1,7 @@
 #extend("base"):
 #export("content"):
 
-#extend("Partials/contentWrapper"):
+#extend("partials/contentWrapper"):
 #export("innerContent"):
 
 <div>
@@ -15,7 +15,7 @@
         
         <!-- Use card.leaf template for rendering reusable component -->
         #for(card in pageData.cards):
-            #extend("Partials/card"):
+            #extend("partials/card"):
                 #export("cardTitle"):
                     #(card.title)
                 #endexport

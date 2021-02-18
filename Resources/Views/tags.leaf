@@ -1,7 +1,7 @@
 #extend("base"):
 #export("content"):
 
-#extend("Partials/contentWrapper"):
+#extend("partials/contentWrapper"):
 #export("innerContent"):
 
 <div>

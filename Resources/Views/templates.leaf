@@ -1,7 +1,7 @@
 #extend("base"):
 #export("content"):
 
-#extend("Partials/contentWrapper"):
+#extend("partials/contentWrapper"):
 #export("innerContent"):
 
 <div>
@@ -43,7 +43,7 @@
     &lt;body&gt;
         &lt;!-- HEADER --&gt;
         &lt;!-- \#extend tag = put content of `header.leaf` tamplate at this palce --&gt;
-        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"Partials/header"</span>)</span></span>:
+        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/header"</span>)</span></span>:
         <span class="hljs-keyword">\#endextend</span>
         &lt;!-- CONTENT --&gt;
         &lt;div&gt;
@@ -52,7 +52,7 @@
         &lt;/div&gt;
         &lt;!-- FOOTER --&gt;
         &lt;!-- \#extend tag = put content of `footer.leaf` tamplate at this palce --&gt;
-        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"Partials/footer"</span>)</span></span>:
+        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/footer"</span>)</span></span>:
         <span class="hljs-keyword">\#endextend</span>
     &lt;/body&gt;
 &lt;/html&gt;

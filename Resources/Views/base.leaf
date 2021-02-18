@@ -16,7 +16,7 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.js" defer></script>
         
         <!-- HEADER -->
-        #extend("Partials/header"):
+        #extend("partials/header"):
         #endextend
         
         <!-- CONTENT -->
@@ -24,7 +24,7 @@
             #import("content")
         </main>
         <!-- FOOTER -->
-        #extend("Partials/footer"):
+        #extend("partials/footer"):
         #endextend
         
     </body>
