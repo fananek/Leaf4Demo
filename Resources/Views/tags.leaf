@@ -74,11 +74,11 @@
     see <a href="/templates">Templates</a>
     
     <h3>Loops and Contitions related</h3>
-    see <a href="/conditions">Loop & Conditions</a>
+    see <a href="/conditions">Loops & Conditions</a>
     
     <h2>Custom tags</h2>
     <p>
-        On top of standard tags, you easily add new functionality writing you own custom tags. We have implemented tag <codeclass="language-swift hljs"><span class="hljs-variable">\#now</span></code>. You can see it changes its value when you reload this page.
+        On top of standard tags, you can easily add new functionality writing you own custom tags. We have implemented tag <codeclass="language-swift hljs"><span class="hljs-variable">\#now</span></code>. You can see it changes its value when you reload this page.
     </p>
     <p class="text-red-500">#now</p>
     <p>Check <a href="https://github.com/fananek/Leaf4Demo/blob/master/Sources/App/CustomTags/NowTag.swift" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">NowTag.swift</span></code></a> to see implementation details.</p>
