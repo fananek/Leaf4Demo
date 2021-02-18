@@ -50,7 +50,7 @@
     
     <h2>Loops meets Conditions</h2>
     <p>
-        In many cases you will use both loops and conditional statements together. Example below (known as zebra striped grid) uses loop to render all rows and conditional statement combined with modulo operation to detect even/odd rows and set alternate background color.
+        In many cases you will use both loops and conditional statements together. Example below (zebra striped table) uses loop to render all rows and conditional statement combined with modulo operation to detect even/odd rows and set alternate background color.
     </p>
     
     <div class="flex flex-col">
