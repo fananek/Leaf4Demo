@@ -7,13 +7,13 @@
 <div>
     <h2>Loops</h2>
     <p>
-        There is a wide range of applications accomplished with loops. Example below demonstrates how to use loops for rendering multiple objects.
+        There is a wide range of applications accomplished with loops. Example below demonstrates how to use loops for rendering multiple objects. It also uses <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/card.leaf" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">card.leaf</span></code></a> template to render individual cards.
     </p>
     
     #if(count(pageData.cards) > 0):
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 pt-6">
         
-        <!-- Use card template for rendering reusable component -->
+        <!-- Use card.leaf template for rendering reusable component -->
         #for(card in pageData.cards):
             #extend("Partials/card"):
                 #export("cardTitle"):
@@ -24,9 +24,6 @@
                 #endexport
                 #export("cardSvgPath"):
                     #(card.svgPath)
-                #endexport
-                #export("card"):
-                    #(card)
                 #endexport
             #endextend
         #endfor
