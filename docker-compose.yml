@@ -19,7 +19,7 @@ x-shared_environment: &shared_environment
 
 services:
   app:
-    image: Leaf4Demo:latest
+    image: leaf4demo:latest
     build:
       context: .
     environment:
