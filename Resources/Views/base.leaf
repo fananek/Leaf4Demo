@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>#(pageData.title)</title>
+        <link rel="stylesheet" href="/styles/app.css">
+        <link rel="stylesheet" href="/styles/highlight/solarized-dark.css">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=optional" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body class="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.js" defer></script>
+        
+        <!-- HEADER -->
+        #extend("Partials/header"):
+        #endextend
+        
+        <!-- CONTENT -->
+        <main class="font-sans-body flex-grow bg-gray-100 dark:bg-gray-900 safe-left safe-right safe-bottom">
+            #import("content")
+        </main>
+        <!-- FOOTER -->
+        #extend("Partials/footer"):
+        #endextend
+        
+    </body>
+</html>

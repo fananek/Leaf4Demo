@@ -1,0 +1,92 @@
+#extend("base"):
+#export("content"):
+
+#extend("Partials/contentWrapper"):
+#export("innerContent"):
+
+<div>
+    <h2>Default tags</h2>
+    <p>
+        Leaf provides set of default tags like logical and mathematical operators.
+    </p>
+    
+    <ul>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">+ , - , * , / , %</span></code><br>
+            1 + 1 = <span class="text-red-500">#(1 + 1)</span><br>
+            5 - 2 = <span class="text-red-500">#(5 - 2)</span><br>
+            6 / 2 = <span class="text-red-500">#(6 / 2)</span><br>
+            4 * 3 = <span class="text-red-500">#(4 * 3)</span><br>
+            5 % 2 = <span class="text-red-500">#(5 % 2)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">> , &lt; , >= , &lt;=</span></code><br>
+            3 > 1: <span class="text-red-500">#(3 > 1)</span><br>
+            5 &lt; 2: <span class="text-red-500">#(5 < 2)</span><br>
+            3 >= 2: <span class="text-red-500">#(3 >= 2)</span><br>
+            2 &lt;= 2: <span class="text-red-500">#(2 <= 2)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">==</span></code><br>
+            1 == 1: <span class="text-red-500">#(1 == 1)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">|| , &&</span></code><br>
+            2 - 2 == 0 || 1 + 3 = 0: <span class="text-red-500">#(2 - 2 == 0 || 1 + 3 == 0)</span><br>
+            2 - 2 == 0 && 1 + 3 = 0: <span class="text-red-500">#(2 - 2 == 0 && 1 + 3 == 0)</span></li>
+        <li>etc.</li>
+    </ul>
+    
+    <h3>Other tags</h3>
+    Let's demonstrate these tags on a few testing variables.
+    <dl>
+        <dd>
+            <codeclass="language-swift hljs"><span class="hljs-keyword">now</span></code>: Date - current date/time
+        </dd>
+        <dd>
+            <codeclass="language-swift hljs"><span class="hljs-keyword">name</span></code>: String - "my name is Jane Doe"
+        </dd>
+        <dd>
+            <codeclass="language-swift hljs"><span class="hljs-keyword">myArray</span></code>: [String] - contains 7 days ["Mon", "Tue","Wed","Thu","Fri","Sat","Sun"]
+        </dd>
+    </dl>
+    
+    <ul>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#count</span></code><br>
+            myArray contains <span class="text-red-500">#count(pageData.myArray)</span> elements</li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#lowercased</span></code><br>
+            lowercased name: <span class="text-red-500">#lowercased(pageData.name)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#uppercased</span></code><br>
+            uppercased name: <span class="text-red-500">#uppercased(pageData.name)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#capitalized</span></code><br>
+            capitalized name: <span class="text-red-500">#capitalized(pageData.name)</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#contains</span></code><br>
+            myArray contains "Mon": <span class="text-red-500">#contains(pageData.myArray, "Mon")</span><br>
+            myArray contains "January": <span class="text-red-500">#contains(pageData.myArray, "January")</span></li>
+        <li>
+            <codeclass="language-swift hljs"><span class="hljs-variable">\#date</span></code><br>
+            current date in "yyyy-MM-dd hh:mm" format: <span class="text-red-500">#date(now, "yyyy-MM-dd hh:mm")</span></li>
+    </ul>
+    
+    <h3>Tags related to templates</h3>
+    see <a href="/templates">Templates</a>)
+    
+    <h3>Loops and Contitions related</h3>
+    see <a href="/conditions">Loop & Conditions</a>)
+    
+    <h2>Custom tags</h2>
+    <p>
+        On top of standard tags, you easily add new functionality writing you own custom tags. We have implemented tag <codeclass="language-swift hljs"><span class="hljs-variable">\#now</span></code>. You can see it changes its value when you reload this page.
+    </p>
+    <p class="text-red-500">#now</p>
+    <p>Check <codeclass="language-swift hljs"><span class="hljs-keyword">NowTag.swift</span></code> to see implementation details.</p>
+
+</div>
+
+#endexport
+#endextend
+
+#endexport
+#endextend

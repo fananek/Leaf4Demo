@@ -1,12 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>#(title)</title>
-</head>
-
-<body>
-  <h1>#(title)</h1>
-</body>
-</html>
+#extend("base"):
+#export("content"):
+<div class="container text-xl max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 text-gray-600 dark:text-gray-200">
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-semibold text-red-500 tracking-wide uppercase">templating engine</h2>
+                <p class="mt-1 text-4xl font-extrabold text-gray-900 dark:text-white sm:tracking-tight">Leaf 4 Demo</p>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">Build beautiful websites with Leaf.</p>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-300">It is a powerful templating language with Swift-inspired syntax. You can use it to generate dynamic HTML pages for a website front-end or generate rich emails to send from an API.</p>
+                <p class="py-6">
+                    <span class="px-2 text-2xl text-gray-500">
+                        🍃
+                    </span>
+                </p>
+                <p class="max-w-xl mx-auto text-xl text-gray-400 dark:text-gray-500">
+                    Purpose of this DEMO website is to provide real examples as a complement to <a href="https://docs.vapor.codes/4.0/leaf/getting-started" class="hover:text-red-500">official documentation</a>.
+                </p>
+                <p class="max-w-xl mx-auto pt-6 text-xl text-gray-400 dark:text-gray-500">
+                    In order to get the most of this demo, see <a href="https://github.com/fananek/Leaf4Demo" class="hover:text-red-500">the source code</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+#endexport
+#endextend

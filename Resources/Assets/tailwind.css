@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-2xl font-bold pb-8;
+    }
+    h2 {
+        @apply text-xl font-bold pb-6;
+    }
+    
+    h3 {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+    .btn-red {
+        @apply px-3 py-2 leading-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+    }
+    .btn-blue {
+        @apply px-3 py-2 leading-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+    }
+}

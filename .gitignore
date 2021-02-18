@@ -6,4 +6,7 @@ DerivedData/
 .DS_Store
 db.sqlite
 .swiftpm
+.env.*
+Resources/Assets/node_modules
+Resources/Assets/package-lock.json
 

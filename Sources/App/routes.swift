@@ -1,11 +1,10 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req in
-        return req.view.render("index", ["title": "Hello Vapor!"])
-    }
-
-    app.get("hello") { req -> String in
-        return "Hello, world!"
+    let controllers: [RouteCollection] = [
+        MainController()
+    ]
+    for controller in controllers {
+        try app.register(collection: controller)
     }
 }
