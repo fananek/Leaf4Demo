@@ -10,7 +10,7 @@
         Did you notice the key icon is now replaced by Jane's name and her profile image?
     </p>
     <p>
-        In fact you are not signed in, sorry. What really happend is that our route handler passed an artificial user into this view context. If you check <codeclass="language-swift hljs"><span class="hljs-keyword">header.leaf</span></code> source code, you'll find there a simple condition responsible switching header content based on value of <codeclass="language-swift hljs"><span class="hljs-variable">loggedInUser</span></code> variable.
+        In fact you are not signed in, sorry. What really happend is that our route handler passed an artificial user into this view context. If you check <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/header.leaf" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">header.leaf</span></code></a> source code, you'll find there a simple condition responsible switching header content based on value of <codeclass="language-swift hljs"><span class="hljs-variable">loggedInUser</span></code> variable.
     </p>
     <p>
         Similar approach can be easily combined with Vapor Session Middleware and Session Authenticator.
