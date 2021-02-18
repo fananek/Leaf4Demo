@@ -4,7 +4,7 @@ Purpose of this website is to provide examples of Leaf templating engine as a co
 
 It's powered by [Vapor framework](https://vapor.codes) and obviously [Leaf](https://github.com/vapor/leaf). Native dark mode support is provided by tailwind.css.
 
-> [Live demo](https://leaf4demo.herokuapp.com)
+## [Live demo](https://leaf4demo.herokuapp.com)
 
 ![Leaf4Demo screenshot](Leaf4Demo_screenshot.png)
 
