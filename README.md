@@ -27,4 +27,4 @@ docker-compose up app
 Open [http://localhost:8080](http://localhost:8080)
 
 ## Contribution
-Any good idea is welcome. :-) Eithr in form of an Issue or Pull Request.
+Any good idea, issue or pull request is welcome. :-)
