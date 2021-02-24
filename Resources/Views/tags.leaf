@@ -72,8 +72,23 @@
     
     <h3>Tags related to templates</h3>
     see <a href="/templates">Templates</a>
+    <p>
+        While <codeclass="language-swift hljs"><span class="hljs-keyword">\#extend</span></code> and <codeclass="language-swift hljs"><span class="hljs-keyword">\#import</span></code> tags are pretty straightforward, <codeclass="language-swift hljs"><span class="hljs-keyword">\#export</span></code> tag has two syntactically different forms.
+<pre><code class="language-html hljs xml">&lt;!-- variant without body --&gt;
+&lt;!-- Important: There is no semicolon or closing tag! --&gt;
+<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"message"</span>, <span class="hljs-string">"This is an export example"</span>)</span></span>
+<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"cardTitle"</span>, <span class="hljs-string">card.title</span>)</span></span>
+<br>
+&lt;!-- variant with body --&gt;
+<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"content"</span>):</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    Content body...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-keyword">\#endexport</span>
+</code></pre>
+    </p>
     
-    <h3>Loops and Contitions related</h3>
+    <h3>Loops and Conditions related</h3>
     see <a href="/conditions">Loops & Conditions</a>
     
     <h2>Custom tags</h2>

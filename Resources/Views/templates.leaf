@@ -12,13 +12,14 @@
 
     <h2>Extending templates</h2>
     <p>
-        Using <codeclass="language-swift hljs"><span class="hljs-keyword">\#extend</span></code> tag you can copy the contents of one template into another. In order to exchange content between child to parent template use <codeclass="language-swift hljs"><span class="hljs-keyword">\#export</span></code> (in chlid) and <codeclass="language-swift hljs"><span class="hljs-keyword">\#import</span></code> (in parent) tags.
+        Using <codeclass="language-swift hljs"><span class="hljs-keyword">\#extend</span></code> tag you can copy the contents of one template into another. In order to exchange content between child and parent template (or even within same template) use <codeclass="language-swift hljs"><span class="hljs-keyword">\#export</span></code> (in child) and <codeclass="language-swift hljs"><span class="hljs-keyword">\#import</span></code> (in parent) tags.
     </p>
+ 
     <dl class="space-y-5">
       <dt>Typical use cases:</dt>
       <dd>
           <strong>Master template</strong><br>
-          It's a common practice to define website layout in a master template. Other pages can extend this master tamplate so you can focus just on content. It also helps to reduce code redundancy.
+          It's a common practice to define website layout in a master template. Other pages can extend this master template so you can focus just on content. It also helps to reduce code redundancy.
       </dd>
       <dd>
           <strong>Standard components (partials)</strong><br>
@@ -29,7 +30,7 @@
     <img src="/images/templates-diagram.png" alt="templates diagram">
 
     <dl class="space-y-5">
-      <dt>The diagram above illustrates connections bewteen templates. Let's break it down.</dt>
+      <dt>The diagram above illustrates connections between templates. Let's break it down.</dt>
       <dd>
           <strong>base.leaf</strong> - is a master template.
 <pre><code class="language-html hljs">&lt;!DOCTYPE html&gt;
@@ -42,16 +43,16 @@
     &lt;/head&gt;
     &lt;body&gt;
         &lt;!-- HEADER --&gt;
-        &lt;!-- \#extend tag = put content of `header.leaf` tamplate at this palce --&gt;
+        &lt;!-- \#extend tag = put content of `header.leaf` template at this palce --&gt;
         <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/header"</span>)</span></span>:
         <span class="hljs-keyword">\#endextend</span>
         &lt;!-- CONTENT --&gt;
         &lt;div&gt;
-        &lt;!-- \#import tag injects content of any child element built on top of this master tempalte --&gt;
+        &lt;!-- \#import tag injects content of any child element built on top of this master template --&gt;
             <span class="hljs-function"><span class="hljs-keyword">\#import</span><span class="hljs-params">(<span class="hljs-string">"content"</span>)</span></span>
         &lt;/div&gt;
         &lt;!-- FOOTER --&gt;
-        &lt;!-- \#extend tag = put content of `footer.leaf` tamplate at this palce --&gt;
+        &lt;!-- \#extend tag = put content of `footer.leaf` template at this palce --&gt;
         <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/footer"</span>)</span></span>:
         <span class="hljs-keyword">\#endextend</span>
     &lt;/body&gt;
@@ -60,10 +61,10 @@
       </dd>
       <dd>
           <strong>index.leaf</strong> - is a template we use for rendering our home page.
-<pre><code class="language-html hljs xml">&lt;!-- \#extend tag means we are building on top of `base.leaf` tempalte --&gt;
-<span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"base"</span>)</span></span>
-&lt;!-- \#export tag says - this is the content I want to pass into master tempalte --&gt;
-<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"content"</span>)</span></span>
+<pre><code class="language-html hljs xml">&lt;!-- \#extend tag means we are building on top of `base.leaf` template --&gt;
+<span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"base"</span>):</span></span>
+&lt;!-- \#export tag says - this is the content I want to pass into master template --&gt;
+<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"content"</span>):</span></span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         Content of a home page...
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
