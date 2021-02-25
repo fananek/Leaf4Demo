@@ -14,10 +14,10 @@
                     </span>
                 </p>
                 <p class="max-w-xl mx-auto text-xl text-gray-400 dark:text-gray-500">
-                    Purpose of this DEMO website is to provide real examples as a complement to <a href="https://docs.vapor.codes/4.0/leaf/getting-started" class="hover:text-red-500">official documentation</a>.
+                    Purpose of this DEMO website is to provide real examples as a complement to <a href="https://docs.vapor.codes/4.0/leaf/getting-started" class="text-gray-500 dark:text-gray-400 font-semibold hover:text-red-500">official documentation</a>.
                 </p>
                 <p class="max-w-xl mx-auto pt-6 text-xl text-gray-400 dark:text-gray-500">
-                    In order to get the most of this demo, see <a href="https://github.com/fananek/Leaf4Demo" class="hover:text-red-500">the source code</a>.
+                    In order to get the most of this demo, see <a href="https://github.com/fananek/Leaf4Demo" class="text-gray-500 dark:text-gray-400 font-semibold hover:text-red-500">the source code</a>.
                 </p>
             </div>
         </div>

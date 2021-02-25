@@ -44,8 +44,7 @@
     &lt;body&gt;
         &lt;!-- HEADER --&gt;
         &lt;!-- \#extend tag = put content of `header.leaf` template at this palce --&gt;
-        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/header"</span>)</span></span>:
-        <span class="hljs-keyword">\#endextend</span>
+        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/header"</span>)</span></span>
         &lt;!-- CONTENT --&gt;
         &lt;div&gt;
         &lt;!-- \#import tag injects content of any child element built on top of this master template --&gt;
@@ -53,8 +52,7 @@
         &lt;/div&gt;
         &lt;!-- FOOTER --&gt;
         &lt;!-- \#extend tag = put content of `footer.leaf` template at this palce --&gt;
-        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/footer"</span>)</span></span>:
-        <span class="hljs-keyword">\#endextend</span>
+        <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"partials/footer"</span>)</span></span>
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -64,11 +62,11 @@
 <pre><code class="language-html hljs xml">&lt;!-- \#extend tag means we are building on top of `base.leaf` template --&gt;
 <span class="hljs-function"><span class="hljs-keyword">\#extend</span><span class="hljs-params">(<span class="hljs-string">"base"</span>):</span></span>
 &lt;!-- \#export tag says - this is the content I want to pass into master template --&gt;
-<span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"content"</span>):</span></span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        Content of a home page...
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-keyword">\#endexport</span>
+    <span class="hljs-function"><span class="hljs-keyword">\#export</span><span class="hljs-params">(<span class="hljs-string">"content"</span>):</span></span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            Content of a home page...
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-keyword">\#endexport</span>
 <span class="hljs-keyword">\#endextend</span>
 </code></pre>
       </dd>

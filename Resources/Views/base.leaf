@@ -16,16 +16,14 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.js" defer></script>
         
         <!-- HEADER -->
-        #extend("partials/header"):
-        #endextend
+        #extend("partials/header")
         
         <!-- CONTENT -->
         <main class="font-sans-body flex-grow bg-gray-100 dark:bg-gray-900 safe-left safe-right safe-bottom">
             #import("content")
         </main>
         <!-- FOOTER -->
-        #extend("partials/footer"):
-        #endextend
+        #extend("partials/footer")
         
     </body>
 </html>
