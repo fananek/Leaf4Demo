@@ -16,7 +16,7 @@
         Similar approach can be easily combined with Vapor Session Middleware and Session Authenticator.
     </p>
     <p>
-        Now click on Jane's name or profile image to simulate sign out.
+        Now click on Jane's name or profile image and open her user profile.
     </p>
 </div>
 

@@ -7,6 +7,7 @@ final class MainController : RouteCollection {
         routes.get("conditions", use: conditions)
         routes.get("tags", use: tags)
         routes.get("login", use: login)
+        routes.get("profile", ":userID", use: profile)
 
         
         routes.get("hc", use: healthCheck)
@@ -79,12 +80,25 @@ final class MainController : RouteCollection {
     }
     
     func login(req: Request) throws -> EventLoopFuture<View> {
-        let user = User(fullName: "Jane Doe", email: "janedoe@acme.com")
+        let user = User(id: UUID(),fullName: "Jane Doe", email: "janedoe@acme.com")
         let context = BaseContext(
             title: "Sign in",
             description: "Now, you are signed in as Jane Doe",
             loggedInUser: user)
         return req.render("login", context)
+    }
+    
+    func profile(req: Request) throws -> EventLoopFuture<View> {
+        guard let userId = req.parameters.get("userID", as: UUID.self ) else {
+            throw Abort(.badRequest)
+        }
+        // fake user - usually we would query the database
+        let user = User(id: userId, fullName: "Jane Doe", email: "janedoe@acme.com")
+        let context = BaseContext(
+            title: "User profile",
+            description: "Example of dynamically generated URL",
+            loggedInUser: user)
+        return req.render("profile", context)
     }
     
 }
