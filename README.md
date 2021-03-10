@@ -28,5 +28,10 @@ docker-compose up app
 
 Open [http://localhost:8080](http://localhost:8080)
 
+## View rendering
+If you compare Leaf 4 documentation and our controller, you might notice the controller doesn't call `req.view.render("tempalte", context)` directly. It uses `req.render("template", context)` instead.
+
+This is a workaround which provides a global context independent on a specific page context. Idea is pretty simple. [Request extension](https://github.com/fananek/Leaf4Demo/blob/master/Sources/App/Extensions/Request%2BRender.swift) wraps provided context and pass it to real renderer.
+
 ## Contribution
 Any good idea, issue or pull request is welcome. :-)
