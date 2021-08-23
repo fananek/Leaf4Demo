@@ -8,6 +8,7 @@ public func configure(_ app: Application) throws {
 
     app.views.use(.leaf)
     app.leaf.tags["now"] = NowTag()
+    app.leaf.tags["nowTable"] = NowTableTag()
 
     // register routes
     try routes(app)

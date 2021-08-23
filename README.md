@@ -2,8 +2,6 @@
 
 Purpose of this website is to provide examples of Leaf templating engine as a complement to [official documentation](https://docs.vapor.codes/4.0/leaf/getting-started).
 
-> example of new `UnsafeUnescapedLeafTag` is coming soon.
-
 It's powered by [Vapor framework](https://vapor.codes) and obviously [Leaf](https://github.com/vapor/leaf). Native dark mode support is provided by tailwind.css.
 
 ## [Live demo](https://leaf4demo.herokuapp.com)

@@ -105,6 +105,15 @@
     </p>
     <p class="text-red-500">#now</p>
     <p>Check <a href="https://github.com/fananek/Leaf4Demo/blob/master/Sources/App/CustomTags/NowTag.swift" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">NowTag.swift</span></code></a> to see implementation details.</p>
+    
+    <h3>Unsafe HTML tag</h3>
+    <p>
+        Leaf offers <codeclass="language-swift hljs"><span class="hljs-keyword">\#unsafeHTML</span></code> tag for rendering parameters you trust that contain HTML you want to leave intact. Your custom tag has to conform to <codeclass="language-swift hljs"><span class="hljs-keyword">UnsafeUnescapedLeafTag</span></code> protocol in order to avoid escaping a HTML.
+    </p>
+    <p>
+        Following example uses custom tag called <a href="https://github.com/fananek/Leaf4Demo/blob/master/Sources/App/CustomTags/NowTableTag.swift" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">\#nowTable</span></code></a> to render a table with date and time based on input parameter.
+    </p>
+    #nowTable
 
 </div>
 
