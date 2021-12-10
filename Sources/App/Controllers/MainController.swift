@@ -8,7 +8,6 @@ final class MainController : RouteCollection {
         routes.get("tags", use: tags)
         routes.get("login", use: login)
         routes.get("profile", ":userID", use: profile)
-
         
         routes.get("hc", use: healthCheck)
     }
@@ -100,5 +99,4 @@ final class MainController : RouteCollection {
             loggedInUser: user)
         return req.render("profile", context)
     }
-    
 }
