@@ -1,7 +1,7 @@
 import Vapor
 
 extension Request {
-    func render<Context: Encodable>(_ template: String, _ context: Context) -> EventLoopFuture<View> {
+    func render<Context: Encodable>(_ template: String, _ context: Context) async throws -> View {
         let webpageURL = self.url.path
         let now = Date()
         
@@ -10,6 +10,6 @@ extension Request {
             webpageURL: webpageURL,
             now: now
         )
-        return self.view.render(template, pageInfo)
+        return try await self.view.render(template, pageInfo)
     }
 }

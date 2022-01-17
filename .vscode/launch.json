@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run Run",
+            "program": "${workspaceFolder}/.build/debug/Run",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "swift: Build Run"
+        }
+    ]
+}

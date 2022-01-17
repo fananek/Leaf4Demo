@@ -8,31 +8,30 @@ final class MainController : RouteCollection {
         routes.get("tags", use: tags)
         routes.get("login", use: login)
         routes.get("profile", ":userID", use: profile)
-        
         routes.get("hc", use: healthCheck)
     }
     
-    func healthCheck(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return req.eventLoop.future(.ok)
+    func healthCheck(req: Request) throws -> HTTPStatus {
+        return HTTPStatus.ok
     }
         
-    func home(req: Request) throws -> EventLoopFuture<View> {
+    func home(req: Request) async throws -> View {
         let context = BaseContext(
             title: "Home",
             description: "Home page",
             loggedInUser: nil)
-        return req.render("index", context)
+        return try await req.render("index", context)
     }
     
-    func templates(req: Request) throws -> EventLoopFuture<View> {
+    func templates(req: Request) async throws -> View {
         let context = BaseContext(
             title: "Templates",
             description: "This site itself is a showcase of Leaf templates",
             loggedInUser: nil)
-        return req.render("templates", context)
+        return try await req.render("templates", context)
     }
     
-    func conditions(req: Request) throws -> EventLoopFuture<View> {
+    func conditions(req: Request) async throws -> View {
         let cards = [
             Card(
                 title: "Cloud",
@@ -65,29 +64,29 @@ final class MainController : RouteCollection {
             description: "How to use loops and conditions",
             loggedInUser: nil,
             cards: cards)
-        return req.render("conditions", context)
+        return try await req.render("conditions", context)
     }
     
-    func tags(req: Request) throws -> EventLoopFuture<View> {
+    func tags(req: Request) async throws -> View {
         let context = TagsContext(
             title: "Tags",
             description: "Leaf tags examples",
             loggedInUser: nil,
             name: "my name is Jane Doe",
             myArray: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
-        return req.render("tags", context)
+        return try await req.render("tags", context)
     }
     
-    func login(req: Request) throws -> EventLoopFuture<View> {
+    func login(req: Request) async throws -> View {
         let user = User(id: UUID(),fullName: "Jane Doe", email: "janedoe@acme.com")
         let context = BaseContext(
             title: "Sign in",
             description: "Now, you are signed in as Jane Doe",
             loggedInUser: user)
-        return req.render("login", context)
+        return try await req.render("login", context)
     }
     
-    func profile(req: Request) throws -> EventLoopFuture<View> {
+    func profile(req: Request) async throws -> View {
         guard let userId = req.parameters.get("userID", as: UUID.self ) else {
             throw Abort(.badRequest)
         }
@@ -97,6 +96,6 @@ final class MainController : RouteCollection {
             title: "User profile",
             description: "Example of dynamically generated URL",
             loggedInUser: user)
-        return req.render("profile", context)
+        return try await req.render("profile", context)
     }
 }
