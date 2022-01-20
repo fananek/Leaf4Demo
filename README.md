@@ -10,7 +10,7 @@ It's powered by [Vapor framework](https://vapor.codes) and obviously [Leaf](http
 
 ## Prerequisites
 
-Leaf4Demo requires Swift 5.2 or greater. It can be run in docker container as well so you don't have to install swift on your local machine.
+Leaf4Demo requires Swift 5.5 or greater. It can be run in docker container as well so you don't have to install swift on your local machine.
 
 ## How to use it?
 
