@@ -25,7 +25,7 @@
         </tr>
     </table>
     <p class="pt-10">
-        We just used dynamically generated URL to open Jane's user profile. For more details see source code of <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/header.leaf" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">header.leaf</span></code></a> file.
+        We just used dynamically generated URL to open Jane's user profile. For more details see source code of <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/header.leaf#L56" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">header.leaf</span></code></a> file.
     </p>
     <p>
         Now click on Jane's name or profile image and select sign out.
