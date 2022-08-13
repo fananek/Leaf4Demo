@@ -15,11 +15,7 @@
         
         <!-- Use card.leaf template for rendering reusable component -->
         #for(card in pageData.cards):
-            #extend("partials/card"):
-                #export("cardTitle", card.title)
-                #export("cardDescription", card.description)
-                #export("cardSvgPath", card.svgPath)
-            #endextend
+            #extend("partials/card")
         #endfor
 
     </div>
