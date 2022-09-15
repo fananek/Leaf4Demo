@@ -13,8 +13,8 @@
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.1.0",
-    "cssnano": "^4.1.10",
+    "autoprefixer": "10.4.5",
+    "cssnano": "^5.1.13",
     "postcss": "^8.2.2",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.2"
