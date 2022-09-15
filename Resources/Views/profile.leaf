@@ -5,14 +5,14 @@
 #export("innerContent"):
 
 <div>
-    <h2>#(pageData.loggedInUser.fullName)</h2>
+    <h2>#(loggedInUser.fullName)</h2>
     <table>
         <tr>
             <td>
                 id
             </td>
             <td>
-                #(pageData.loggedInUser.id)
+                #(loggedInUser.id)
             </td>
         </tr>
         <tr>
@@ -20,7 +20,7 @@
                 email
             </td>
             <td>
-                #(pageData.loggedInUser.email)
+                #(loggedInUser.email)
             </td>
         </tr>
     </table>

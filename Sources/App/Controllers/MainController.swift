@@ -18,16 +18,14 @@ final class MainController : RouteCollection {
     func home(req: Request) async throws -> View {
         let context = BaseContext(
             title: "Home",
-            description: "Home page",
-            loggedInUser: nil)
+            description: "Home page")
         return try await req.render("index", context)
     }
     
     func templates(req: Request) async throws -> View {
         let context = BaseContext(
             title: "Templates",
-            description: "This site itself is a showcase of Leaf templates",
-            loggedInUser: nil)
+            description: "This site itself is a showcase of Leaf templates")
         return try await req.render("templates", context)
     }
     
@@ -62,7 +60,6 @@ final class MainController : RouteCollection {
         let context = ConditionsLoopsContext(
             title: "Loops & Conditions",
             description: "How to use loops and conditions",
-            loggedInUser: nil,
             cards: cards)
         return try await req.render("conditions", context)
     }
@@ -71,18 +68,19 @@ final class MainController : RouteCollection {
         let context = TagsContext(
             title: "Tags",
             description: "Leaf tags examples",
-            loggedInUser: nil,
             name: "my name is Jane Doe",
             myArray: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
         return try await req.render("tags", context)
     }
     
     func login(req: Request) async throws -> View {
+        // manually login as a fake user
         let user = User(id: UUID(),fullName: "Jane Doe", email: "janedoe@acme.com")
+        req.auth.login(user)
+        
         let context = BaseContext(
             title: "Sign in",
-            description: "Now, you are signed in as Jane Doe",
-            loggedInUser: user)
+            description: "Now, you are signed in as Jane Doe")
         return try await req.render("login", context)
     }
     
@@ -92,10 +90,11 @@ final class MainController : RouteCollection {
         }
         // fake user - usually we would query the database
         let user = User(id: userId, fullName: "Jane Doe", email: "janedoe@acme.com")
+        req.auth.login(user)
+        
         let context = BaseContext(
             title: "User profile",
-            description: "Example of dynamically generated URL",
-            loggedInUser: user)
+            description: "Example of dynamically generated URL")
         return try await req.render("profile", context)
     }
 }
