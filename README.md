@@ -4,10 +4,6 @@ Purpose of this website is to provide examples of Leaf templating engine as a co
 
 It's powered by [Vapor framework](https://vapor.codes) and obviously [Leaf](https://github.com/vapor/leaf). Native dark mode support is provided by tailwind.css.
 
-## [Live demo](https://leaf4demo.herokuapp.com)  
-> :warning: Live demo won't be available anymore! Starting November 28th, 2022, free Heroku Dynos will no longer be available! It means also end of life for this live demo.
-> Repository itself will continue so you can still run it locally or spin up a docker container.  
-
 ![Leaf4Demo screenshot](Leaf4Demo_screenshot.png)
 
 ## Prerequisites
