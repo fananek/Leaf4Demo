@@ -10,6 +10,6 @@ public func configure(_ app: Application) throws {
     app.leaf.tags["now"] = NowTag()
     app.leaf.tags["nowTable"] = NowTableTag()
 
-    // register routes
+    // register all routes
     try routes(app)
 }
