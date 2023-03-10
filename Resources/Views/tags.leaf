@@ -42,6 +42,9 @@
                 <codeclass="language-swift hljs"><span class="hljs-variable">now</span></code>: Date - current date/time
             </dd>
             <dd>
+                <codeclass="language-swift hljs"><span class="hljs-variable">emptyString</span></code>: String - ""
+            </dd>
+            <dd>
                 <codeclass="language-swift hljs"><span class="hljs-variable">name</span></code>: String - "my name is Jane Doe"
             </dd>
             <dd>
@@ -55,6 +58,9 @@
             <dt class="font-semibold">
                 <codeclass="language-swift hljs"><span class="hljs-keyword">\#count</span></code></dt>
                 <dd class="pl-4">myArray contains <span class="text-red-500">#count(pageData.myArray)</span> elements</dd>
+            <dt class="font-semibold">
+                <codeclass="language-swift hljs"><span class="hljs-keyword">\#isEmpty</span></code></dt>
+                <dd class="pl-4">is emptyString empty: <span class="text-red-500">#isEmpty(pageData.emptyString)</span></dd>
             <dt class="font-semibold">
                 <codeclass="language-swift hljs"><span class="hljs-keyword">\#lowercased</span></code></dt>
                 <dd class="pl-4">lowercased name: <span class="text-red-500">#lowercased(pageData.name)</span></dd>

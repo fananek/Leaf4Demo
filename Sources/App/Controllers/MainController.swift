@@ -57,10 +57,18 @@ final class MainController : RouteCollection {
                 svgPath: "M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01")
         ]
         
+        var chessBoard = Array(repeating: Array(repeating: "", count: 8), count: 8)
+        // Initialize the chess board with starting positions
+        chessBoard[0] = ["♜", "♞", "♝", "♛", "♚", "♝", "♞", "♜"]
+        chessBoard[1] = Array(repeating: "♟︎", count: 8)
+        chessBoard[6] = Array(repeating: "♙", count: 8)
+        chessBoard[7] = ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"]
+
         let context = ConditionsLoopsContext(
             title: "Loops & Conditions",
             description: "How to use loops and conditions",
-            cards: cards)
+            cards: cards,
+            board: chessBoard)
         return try await req.render("conditions", context)
     }
     
@@ -69,6 +77,7 @@ final class MainController : RouteCollection {
             title: "Tags",
             description: "Leaf tags examples",
             name: "my name is Jane Doe",
+            emptyString: "",
             myArray: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"])
         return try await req.render("tags", context)
     }

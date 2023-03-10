@@ -7,7 +7,7 @@
 <div>
     <h2>Loops</h2>
     <p>
-        There is a wide range of applications accomplished with loops. Example below demonstrates how to use loops for rendering multiple objects. It also uses <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/card.leaf" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">card.leaf</span></code></a> template to render individual cards.
+      There is a wide range of applications accomplished with loops. Example below demonstrates how to use loops for rendering multiple objects. It uses <a href="https://github.com/fananek/Leaf4Demo/blob/master/Resources/Views/partials/card.leaf" target="blank"><codeclass="language-swift hljs"><span class="hljs-keyword">card.leaf</span></code></a> template to render individual cards.
     </p>
     
     #if(count(pageData.cards) > 0):
@@ -20,7 +20,60 @@
 
     </div>
     #endif
-    
+
+    <h3>For loop properties</h3>
+    <p>
+      Leaf <codeclass="language-swift hljs"><span class="hljs-keyword">for</span></code> loop declares three variables: <codeclass="language-swift hljs"><span class="hljs-keyword">isFirst</span></code>, 
+      <codeclass="language-swift hljs"><span class="hljs-keyword">isLast</span></code> and <codeclass="language-swift hljs"><span class="hljs-keyword">index</span></code>. 
+      You can rename the <codeclass="language-swift hljs"><span class="hljs-keyword">index</span></code> variable. It's useful when processing multi-dimensional arrays. 
+    </p>
+    <p>
+      Let's demonstrate on a chessboard, which can be nicely represented by a 2D array.
+      </br>
+<pre><code class="language-swift hljs">var chessBoard = Array(repeating: Array(repeating: "", count: 8), count: 8)
+
+// Initialize the chess board with starting positions
+chessBoard[0] = ["♜", "♞", "♝", "♛", "♚", "♝", "♞", "♜"]
+chessBoard[1] = Array(repeating: "♟︎", count: 8)
+chessBoard[6] = Array(repeating: "♙", count: 8)
+chessBoard[7] = ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"]
+</code></pre>
+    </p>
+
+    <p>
+      Now, let's render the chessboard using Leaf. Since our chessboard is a 2D array, we will use nested loops. To render coordinates and cell colour we must know the current index of the inner and outer loop. Fortunately, we can give a custom name to each of the indices.
+
+<pre><code class="language-html hljs xml">&lt;!-- template.leaf --&gt;
+&lt;!-- \#for(indexName, element in array): --&gt;
+<span class="hljs-function"><span class="hljs-keyword">\#for</span><span class="hljs-params">(<span class="hljs-string">i, row in board</span>):</span>
+  <span class="hljs-function"><span class="hljs-keyword">\#for</span><span class="hljs-params">(<span class="hljs-string">j, field in row</span>):</span>
+    <span class="hljs-function"><span class="hljs-keyword">\#if</span><span class="hljs-params">(<span class="hljs-string">(i + j) % 2 == 0</span>):</span>
+      &lt;!-- set light backgroud --&gt;
+    <span class="hljs-function"><span class="hljs-keyword">\#else</span>:</span>
+      &lt;!-- set dark backgroud --&gt;
+    <span class="hljs-function"><span class="hljs-keyword">\#endif</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">\#</span><span class="hljs-params">(<span class="hljs-string">field</span>)</span>
+    &lt;!-- render both indicies --&gt;
+    <span class="hljs-function">(<span class="hljs-keyword">\#</span><span class="hljs-params"><span class="hljs-string">(i)</span>, </span><span class="hljs-function"><span class="hljs-keyword">\#</span><span class="hljs-params"><span class="hljs-string">(j)</span>)</span>
+  <span class="hljs-function"><span class="hljs-keyword">\#endfor</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">\#endfor</span>:</span>
+</code></pre>
+    </p>
+    <p>
+      And here we go. This is our shiny chessboard.
+    </p>
+    <div class="grid grid-cols-8 grid-rows-8 gap-0 text-center grid-flow-row auto-cols-max auto-rows-max">
+      #for(i, row in pageData.board):
+        #for(j, field in row):
+          <div class="#if((i + j) % 2 == 0): bg-gray-300 text-gray-800 #else: bg-gray-800 text-gray-100 #endif content-center">
+            <div class="text-5xl">#(field)</br></div>
+            <div class="text-xs">(#(i), #(j))</div>
+          </div>
+        #endfor
+    #endfor
+    </div>
+            
     <h2>Conditions</h2>
     <p>
         Leaf supports conditional statements similar as swift.
