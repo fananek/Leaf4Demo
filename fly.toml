@@ -1,10 +1,15 @@
-# fly.toml file generated for leaf4demo on 2023-03-10T15:30:25+01:00
+# fly.toml app configuration file generated for leaf4demo on 2023-05-05T23:18:11+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "leaf4demo"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "ams"
 processes = []
+
+[build]
 
 [env]
 

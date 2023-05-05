@@ -8,6 +8,15 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "swift: Build Run"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run App",
+            "program": "${workspaceFolder}/.build/debug/App",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "swift: Build App"
         }
     ]
 }
