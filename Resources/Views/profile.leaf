@@ -5,7 +5,14 @@
 #export("innerContent"):
 
 <div>
-    <h2>#(loggedInUser.fullName)</h2>
+  <div class="flex items-center">
+    <div>
+        <img class="inline-block h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+    </div>
+    <div class="ml-5">
+        <h2>#(loggedInUser.fullName)</h2>
+    </div>
+  </div>
     <table>
         <tr>
             <td>
